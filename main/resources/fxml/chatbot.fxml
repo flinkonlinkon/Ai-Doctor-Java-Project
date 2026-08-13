@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="18" styleClass="page" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.dermavisionai.controller.ChatbotController">
+    <padding>
+        <Insets top="28" right="32" bottom="28" left="32"/>
+    </padding>
+    <Label text="AI Chatbot" styleClass="page-title"/>
+    <HBox spacing="18" VBox.vgrow="ALWAYS">
+        <TextArea fx:id="chatArea" editable="false" wrapText="true" HBox.hgrow="ALWAYS" styleClass="chat-area"/>
+        <VBox spacing="12" prefWidth="260" styleClass="card">
+            <padding>
+                <Insets top="18" right="18" bottom="18" left="18"/>
+            </padding>
+            <Label text="Suggested Questions" styleClass="card-title"/>
+            <Button text="How do I remove dark spots?" onAction="#askSuggested" maxWidth="Infinity" styleClass="suggestion-chip"/>
+            <Button text="What sunscreen should I use?" onAction="#askSuggested" maxWidth="Infinity" styleClass="suggestion-chip"/>
+            <Button text="Is my skin oily or dry?" onAction="#askSuggested" maxWidth="Infinity" styleClass="suggestion-chip"/>
+            <Button text="How to reduce pores?" onAction="#askSuggested" maxWidth="Infinity" styleClass="suggestion-chip"/>
+            <Button text="Best skincare routine?" onAction="#askSuggested" maxWidth="Infinity" styleClass="suggestion-chip"/>
+        </VBox>
+    </HBox>
+    <HBox spacing="12">
+        <TextField fx:id="questionField" promptText="Ask about acne, sunscreen, moisturizers, or your analysis" HBox.hgrow="ALWAYS" onAction="#sendQuestion"/>
+        <Button text="Send" onAction="#sendQuestion" styleClass="primary-button"/>
+    </HBox>
+</VBox>
