@@ -21,7 +21,7 @@ This software is built for educational purposes and does not provide medical dia
 
 ## Team Task Distribution
 
-| Part | Description | Member |
+| Description | Member | ID |
 |------|--------------|--------|
 | Foundation & Data Models — project setup, config, core models | Fahim Shahriar Linkon | 251-15-765 |
 | Database Layer — DAOs, DB connection & initialization | Mahfuz Ahmed Mahin | 251-15-923 |
